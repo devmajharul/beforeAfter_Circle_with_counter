@@ -1,0 +1,162 @@
+<style>
+	h1,h2,h3,p{
+		margin: 0;
+		padding: 0;
+	}
+
+	.box_counter_area{
+		padding: 50px 0;
+	}
+	section.box_counter_area {
+	    display: flex;
+	    justify-content: center;
+	}
+
+	.circle_box_items {
+		flex-basis: 50%;
+		text-align: center;
+	}
+
+	.main_circle_box {
+	    width: 300px;
+	    height: 300px;
+	    background: #000;
+	    border-radius: 50%;
+	    z-index: 988;
+	    position: relative;
+	}
+
+	.main_circle_box:before {
+	    position: absolute;
+	    bottom: -75px;
+	    left: -106px;
+	    width: 250px;
+	    height: 250px;
+	    border-radius: 50%;
+	    background: #fff;
+	    content: "";
+    	opacity: 0.1;
+	}
+	.main_counter_item_center {
+	    width: 300px;
+	    height: 300px;
+	    background: #fff;
+	    border-radius: 50%;
+	    display: flex;
+	    justify-content: center;
+	    flex-direction: column;
+	    align-items: center;
+	    z-index: 999;
+	    position: absolute;
+	    top: 25px;
+	    left: 70px;
+	    box-shadow: 6px 15px 15px #ccc;
+	}
+
+	.main_counter_item_center:before {
+	    position: absolute;
+	    left: -140px;
+	    top: 155px;
+	    width: 250px;
+	    height: 140px;
+	    background: #fff;
+	    content: "";
+	    border-radius: 50%;
+	    z-index: -980;
+	    opacity: 0.1;
+	}
+
+	.main_counter_item_center h1 {
+	    color: #2c7ae7;
+	    font-size: 115px;
+	}
+
+	.main_counter_item_center p{
+		font-size: 28px;
+		line-height: 1.2;
+		color: #000;
+		font-weight: bold;
+	}
+
+	.uronto_box {
+	    position: absolute;
+	    top: 10%;
+	    right: 44%;
+	    content: "";
+	    width: 50px;
+	    height: 50px;
+	    background: #000;
+	    border-radius: 50%;
+	}
+
+	.uronto_box:after {
+	    position: absolute;
+	    right: -20%;
+	    bottom: -130%;
+	    content: "";
+	    background: #2c7ae7;
+	    width: 35px;
+	    height: 35px;
+	    border-radius: 50%;
+	}
+
+	.counter_box_text {
+	    margin-bottom: 40px;
+	}
+	.counter_box_text h2 {
+	    font-size: 50px;
+	    font-weight: bold;
+	    line-height: 1.2;
+	    color: var(--main-color);
+	    margin-bottom: 5px;
+	    color: #2c7ae7;
+	}
+
+	.counter_box_text h3 {
+	    color: #303036;
+	    font-size: 30px;
+	}
+
+</style>
+
+
+<section class="box_counter_area">
+	<div class="circle_box_items">
+		<div class="main_circle_box">
+			<div class="main_counter_item_center">
+				<h1>10</h1>
+				<p>Years <br>Of Experience</p>
+			</div>
+		</div>
+		<div class="uronto_box"></div>
+	</div>
+
+	<div class="counter_box_content">
+		<div class="counter_box_text">
+			<h2><span class="counts_up">2</span>k</h2>
+			<h3>Apps Developer</h3>
+		</div>
+		<div class="counter_box_text">
+			<h2><span class="counts_up">40</span></h2>
+			<h3>Consultans</h3>
+		</div>
+		<div class="counter_box_text">
+			<h2><span class="counts_up">160</span></h2>
+			<h3>Employers</h3>
+		</div>
+	</div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+<script>
+  	jQuery(document).ready(function($) {
+        $('.counts_up').counterUp({
+		  delay: 10,
+		  time: 2000
+		});
+    });
+</script>
